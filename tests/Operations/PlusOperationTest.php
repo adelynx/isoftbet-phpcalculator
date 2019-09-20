@@ -10,10 +10,8 @@ class PlusOperationTest extends TestCase
     public function test_calling_calculator_with_plus_operation_should_return_the_sum(): void
     {
         $calculator = new Calculator();
-
-        $result = $calculator->calculate('plus', 2, 7);
-
-        $this->assertEquals(9, $result);
+        
+        $this->assertEquals(9, $calculator->calculate('plus', 2, 7));
     }
 
     public function test_calling_calculator_with_plus_operation_with_multiple_operands_should_return_the_sum(): void
