@@ -10,16 +10,16 @@ class DivisionOperation implements IOperation
     /**
      * This method calculate the division of 2 operands
      *
-     * @param float $FirstOperand
-     * @param float $SecondOperand
+     * @param float $firstOperand
+     * @param float $secondOperand
      * @return float
      */
-    public function Calculate(float $FirstOperand, float $SecondOperand): float
+    public function calculate(float $firstOperand, float $secondOperand): float
     {
-        if ($SecondOperand == 0) {
+        if ($secondOperand == 0) {
             throw new DivisionByZeroError('Division by 0 is not supported');
         }
 
-        return $FirstOperand / $SecondOperand;
+        return $firstOperand / $secondOperand;
     }
 }

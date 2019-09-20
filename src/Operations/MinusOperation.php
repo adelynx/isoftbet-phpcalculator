@@ -9,12 +9,12 @@ class MinusOperation implements IOperation
     /**
      * This method calculate the subtraction of 2 operands
      *
-     * @param float $FirstOperand
-     * @param float $SecondOperand
+     * @param float $firstOperand
+     * @param float $secondOperand
      * @return float
      */
-    public function Calculate(float $FirstOperand, float $SecondOperand): float
+    public function calculate(float $firstOperand, float $secondOperand): float
     {
-        return $FirstOperand - $SecondOperand;
+        return $firstOperand - $secondOperand;
     }
 }
