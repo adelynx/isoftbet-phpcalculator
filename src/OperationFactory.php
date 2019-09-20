@@ -32,7 +32,7 @@ class OperationFactory
                 return new DivisionOperation();
 
             default:
-                throw new RuntimeException('Operation not found');
+                throw new RuntimeException('Operation not found.');
         }
     }
 }

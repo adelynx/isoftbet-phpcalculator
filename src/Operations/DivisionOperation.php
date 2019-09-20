@@ -17,7 +17,7 @@ class DivisionOperation implements IOperation
     public function calculate(float $firstOperand, float $secondOperand): float
     {
         if ($secondOperand == 0) {
-            throw new DivisionByZeroError('Division by 0 is not supported');
+            throw new DivisionByZeroError('Division by 0 is not supported.');
         }
 
         return $firstOperand / $secondOperand;

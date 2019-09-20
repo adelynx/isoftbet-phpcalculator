@@ -5,26 +5,21 @@ namespace iSoftBet;
 class Calculator
 {
     /**
-     * @var OperationFactory
-     */
-    private $operationFactory;
-
-    /**
-     * Calculator constructor.
+     * This method do the calculation and return the result
      *
-     * @param OperationFactory $operationFactory
+     * @param string $operationName
+     * @param float $firstOperand
+     * @param float $secondOperand
+     * @return float
      */
-    public function __construct(OperationFactory $operationFactory)
-    {
-        $this->operationFactory = $operationFactory;
-    }
-
-    public function Calculate(
+    public function calculate(
         string $operationName,
         float $firstOperand,
         float $secondOperand
     ): float {
-        $operation = $this->operationFactory::getOperation($operationName);
+        $operationFactory = new OperationFactory();
+
+        $operation = $operationFactory::getOperation($operationName);
 
         return $operation->calculate($firstOperand, $secondOperand);
     }
