@@ -22,4 +22,23 @@ class DivisionOperation implements IOperation
 
         return $firstOperand / $secondOperand;
     }
+
+    /**
+     * This method calculate an operation with multiple operands
+     *
+     * @param array $operands
+     * @return float
+     */
+    public function multipleCalculate(array $operands): float
+    {
+        $result = $operands[0];
+
+        array_shift($operands);
+
+        foreach ($operands as $operand) {
+            $result = $this->calculate($result, $operand);
+        }
+
+        return $result;
+    }
 }

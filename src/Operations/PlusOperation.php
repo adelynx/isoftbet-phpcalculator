@@ -2,6 +2,7 @@
 
 namespace iSoftBet\Operations;
 
+use InvalidArgumentException;
 use iSoftBet\IOperation;
 
 class PlusOperation implements IOperation
@@ -18,4 +19,24 @@ class PlusOperation implements IOperation
         return $firstOperand + $secondOperand;
     }
 
+    /**
+     * This method calculate an operation with multiple operands
+     *
+     * @param array $operands
+     * @return float
+     */
+    public function multipleCalculate(array $operands): float
+    {
+        if (count($operands) < 2) {
+            throw new InvalidArgumentException('You need at least 2 operands to do this operation.');
+        }
+
+        $result = 0;
+        
+        foreach ($operands as $operand) {
+            $result = $this->calculate($result, $operand);
+        }
+
+        return $result;
+    }
 }

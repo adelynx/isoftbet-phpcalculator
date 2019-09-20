@@ -2,11 +2,11 @@
 
 namespace iSoftBet;
 
+use InvalidArgumentException;
 use iSoftBet\Operations\DivisionOperation;
 use iSoftBet\Operations\MinusOperation;
 use iSoftBet\Operations\MultiplicationOperation;
 use iSoftBet\Operations\PlusOperation;
-use RuntimeException;
 
 class OperationFactory
 {
@@ -32,7 +32,7 @@ class OperationFactory
                 return new DivisionOperation();
 
             default:
-                throw new RuntimeException('Operation not found.');
+                throw new InvalidArgumentException('Invalid Operation.');
         }
     }
 }

@@ -23,4 +23,22 @@ class Calculator
 
         return $operation->calculate($firstOperand, $secondOperand);
     }
+
+    /**
+     * This method do the multiple calculation and return the result
+     *
+     * @param string $operationName
+     * @param array $operands
+     * @return float
+     */
+    public function multipleCalculate(
+        string $operationName,
+        array $operands
+    ): float {
+        $operationFactory = new OperationFactory();
+
+        $operation = $operationFactory::getOperation($operationName);
+
+        return $operation->multipleCalculate($operands);
+    }
 }
