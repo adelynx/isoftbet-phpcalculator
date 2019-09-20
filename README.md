@@ -13,3 +13,21 @@ Create a simple PHP calculator with operations plus, minus, multiply, divide.
 
 - You can use composer or autoload class
 - No frontend or framework necessary
+
+## Usage
+
+To use iSoftBet PHP Test you need to clone the repository first and make sure to install all the dependencies using `composer`:
+
+```bash
+git clone https://github.com/adelynx/isoftbet-phpcalculator.git
+cd isoftbet-phpcalculator
+composer install
+```
+
+## Run Tests
+
+To run the test, you need just run this command in the terminal: 
+
+```bash
+vendor/bin/phpunit
+```
