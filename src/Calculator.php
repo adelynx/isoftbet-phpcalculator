@@ -7,7 +7,7 @@ class Calculator
     /**
      * This method do the calculation and return the result
      * TODO:: PS: I could take ride off this method as the multipleCalculate() does the same job
-     *      but in fact I left it as I could have in my API as example and end point just with 2
+     *      but in fact I left it as I could have in my API as example an end point just with 2
      *      operands. So, to make my work easy is good to have the calculate() method to be called
      *      when I have just operands to be calculated.
      *
