@@ -1,0 +1,22 @@
+{
+  "name": "adelynx/isoftbet_php_test",
+  "type": "project",
+  "description": "iSoftBet PHP interview test",
+  "license": "MIT",
+
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "iSoftBet\\": "src/"
+    }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "iSoftBetTest\\": "tests/"
+    }
+  }
+}
