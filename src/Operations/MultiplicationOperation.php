@@ -2,6 +2,7 @@
 
 namespace iSoftBet\Operations;
 
+use InvalidArgumentException;
 use iSoftBet\IOperation;
 
 class MultiplicationOperation implements IOperation
@@ -31,7 +32,7 @@ class MultiplicationOperation implements IOperation
         }
 
         $result = 1;
-        
+
         foreach ($operands as $operand) {
             $result = $this->calculate($result, $operand);
         }

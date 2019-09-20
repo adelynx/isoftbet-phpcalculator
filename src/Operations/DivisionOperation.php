@@ -3,6 +3,7 @@
 namespace iSoftBet\Operations;
 
 use DivisionByZeroError;
+use InvalidArgumentException;
 use iSoftBet\IOperation;
 
 class DivisionOperation implements IOperation
@@ -31,6 +32,10 @@ class DivisionOperation implements IOperation
      */
     public function multipleCalculate(array $operands): float
     {
+        if (count($operands) < 2) {
+            throw new InvalidArgumentException('You need at least 2 operands to do this operation.');
+        }
+
         $result = $operands[0];
 
         array_shift($operands);
