@@ -11,7 +11,6 @@ interface IOperation
      * @param float $secondOperand
      * @return float
      */
-
     public function calculate(float $firstOperand, float $secondOperand): float;
 
     /**
